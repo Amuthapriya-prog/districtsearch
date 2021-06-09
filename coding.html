@@ -1,0 +1,79 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>District Search</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body
+{
+font-size:100%;
+font-family:"Courier New",monospace;
+background-color:white;
+}
+.formbox
+{
+margin:auto;
+width:70%;
+border:4px solid black;
+padding:10px;
+}
+label
+{
+display:inline-block;
+float:left;
+clear:left;
+width:150px;
+}
+.in
+{
+float:left;
+}
+</style>
+</head>
+
+<body>
+<div class="formbox">
+<form>
+<label for="name">District Name</label>
+<input type="text" class="in" style="background-color : grey" name="" placeholder="">
+<br>
+<br>
+<label for="name">Area (sq mt)</label>
+<input class="in" type="number" style="background-color : grey" name="" placeholder="">
+<br>
+<br>
+<label for="name">Population</label>
+<input type="number" class="in" style="background-color : grey" name="" placeholder="">
+<br>
+<br>
+<div class="button">
+<button style="background-color : grey"> Save</button>
+</div>
+</form>
+<br>
+<br>
+<br>
+<br>
+<fieldset>
+<label for="name">Biggest District(Area wise)</label><br>
+<br>
+<br>
+<input type="radio" name="district">Chennai
+<input type="radio" ng-style="selected" ng-change="selectedStyle={color:'red'} name="district">Coimbatore
+<input type="radio" name="district">Salem
+</fieldset>
+<br>
+<br>
+<fieldset>
+<label for="name">Highly populated District</label><br>
+<br>
+<br>
+<div data-ng-repeat="">
+<input type="radio" ng-style="selected" ng-change="selectedStyle={color:'red'} name="district">Chennai
+<input type="radio"  name="district">Coimbatore
+<input type="radio"  name="district">Salem
+</div>
+</fieldset>
+</div>
+</body>
+</html>
